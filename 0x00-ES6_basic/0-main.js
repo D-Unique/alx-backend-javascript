@@ -1,3 +1,3 @@
-import getBudgetForCurrentYear from './8-getBudgetCurrentYear.js';
+import { taskFirst, taskNext } from './0-constants.js';
 
-console.log(getBudgetForCurrentYear(2100, 5200, 1090));
+console.log(`${taskFirst()} ${taskNext()}`);
