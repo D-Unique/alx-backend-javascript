@@ -1,3 +1,5 @@
-import { taskFirst, taskNext } from './0-constants.js';
+import getSumOfHoods from './3-default-parameter.js';
 
-console.log(`${taskFirst()} ${taskNext()}`);
+console.log(getSumOfHoods(34));
+console.log(getSumOfHoods(34, 3));
+console.log(getSumOfHoods(34, 3, 4));
