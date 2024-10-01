@@ -1,8 +1,7 @@
 export default function returnHowManyArguments(...args) {
-    let counter = 0;
-    for ( let arg in args)
-        counter++;
-
-    return counter;
-
+  let counter = 0;
+  for (const arg of args) {
+    counter += arg;
+  }
+  return counter;
 }
