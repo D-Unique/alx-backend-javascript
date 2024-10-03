@@ -7,7 +7,7 @@ export function getResponseFromAPI() {
       };
       resolve(response);
     }, 2000);
-});
+  });
 }
 
 export default getResponseFromAPI;
