@@ -7,7 +7,7 @@ export default class Currency {
   }
 
   set code(val) {
-    if (typeof (val) !== 'String') throw new TypeError(' Code should be 0f type string'); // eslint-disable-line valid-typeof
+    if (typeof (val) !== 'String') throw new TypeError(' Code should be 0f type string'); //eslint-disable-line valid-typeof
     this._val = val;
   }
 
@@ -16,7 +16,7 @@ export default class Currency {
   }
 
   set name(val) {
-    if (typeof (val) !== 'String') throw new TypeError(' name should be 0f type string'); // eslint-disable-line valid-typeof
+    if (typeof (val) !== 'String') throw new TypeError(' name should be 0f type string'); //eslint-disable-line 
     this._val = val;
   }
 
