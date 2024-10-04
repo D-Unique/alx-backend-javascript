@@ -2,6 +2,7 @@ import Currency from './3-currency';
 
 export default class Pricing extends Currency {
   Constructor(amount, Currency) {
+    super(code, name)
     this._amount = amount;
     this._Currency = Currency;
     if (!Number.isInteger(amount)) throw new TypeError('amount must be a number');
