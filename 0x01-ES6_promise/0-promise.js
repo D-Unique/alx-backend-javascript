@@ -1,5 +1,5 @@
-export function getResponseFromAPI() {
-  return new Promise((resolve, reject) => {
+export default function getResponseFromAPI() {
+  return new Promise((resolve) => {
     setTimeout(() => {
       const response = {
         data: 'Success',
@@ -9,5 +9,3 @@ export function getResponseFromAPI() {
     }, 2000);
   });
 }
-
-export default getResponseFromAPI;
