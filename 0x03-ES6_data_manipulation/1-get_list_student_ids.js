@@ -1,6 +1,6 @@
 export default function getListStudentIds(element) {
   if (!Array.isArray(element)) {
-    return {};
+    return [];
   }
   console.log(element.length);
   return element.map((item) => item.id);
