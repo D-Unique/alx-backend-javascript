@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Object </title>
+</head>
+
+<body>
+    <table id="myTable" border="1">
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="addRow()">Add Row</button>
+
+    <script>
+        function addRow() {
+            // Get the table by its ID
+            let table = document.getElementById("myTable");
+
+            // Insert a new row at the end of the table
+            let newRow = table.insertRow();
+
+            // Insert cells in the new row
+            let cell1 = newRow.insertCell(0);
+            let cell2 = newRow.insertCell(1);
+
+            // Add text content to the new cells
+            cell1.textContent = "New Row, Cell 1";
+            cell2.textContent = "New Row, Cell 2";
+        }
+    </script>
+</body>
+
+</html>
