@@ -1,5 +1,5 @@
 export default function createInt8TypedArray(length, postion, value) {
-  if (postion > length) console.log('Position outside range should be thrown');
+  if (postion > length)  throw new Error('Position outside range');
 
   const int8 = new Int8Array(length);
 
