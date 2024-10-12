@@ -66,3 +66,17 @@ function executeWork(employee: DirectorInterface | TeacherInterface) {
     }
   }
 
+  type Subjects = "Math" | "History";
+
+  function teachClass(todayClass: Subjects): string {
+    switch (todayClass) {
+      case "Math":
+        return "Teaching Math";
+      case "History":
+        return "Teaching History";
+      default:
+        throw new Error("Invalid subject");   
+  
+    }
+  }
+  
