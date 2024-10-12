@@ -1,9 +1,9 @@
-export default function cleanSet(set, startString) {
-  if (!set || !startString || !(set instanceof Set) || typeof startString !== 'string') return '';
-
-  const filteredElements = Array.from(set)
-    .filter((element) => element.startsWith(startString))
-    .map((element) => element.slice(startString.length));
-
-  return filteredElements.join('-');
+export default function cleanSet(xSet, xStartString) {
+  if (!xSet || !xStartString || !(xSet instanceof Set) || typeof xStartString !== 'string') {
+    return '';
+  }
+  return Array.from(xSet)
+    .filter((ele) => ele && ele.startsWith(xStartString))
+    .map((ele) => ele.replace(xStartString, ''))
+    .join('-');
 }
