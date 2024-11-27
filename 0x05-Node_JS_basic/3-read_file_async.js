@@ -1,5 +1,5 @@
-const fs = require('node:fs')
-const papa = require('node:papaparse')
+const fs = require('fs')
+const papa = require('papaparse')
 
 function countStudents(path) {
     try {
