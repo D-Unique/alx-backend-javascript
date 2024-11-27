@@ -1,20 +1,31 @@
-const papa = require('papaparse');
-const fs = require('node:fs');
+const fs = require('fs');
+const Papa = require('papaparse');
 
 function countStudents(path) {
   try {
     const data = fs.readFileSync(path, 'utf8');
-    const result = papa.parse(data, {
+    const parsedData = Papa.parse(data, {
       header: true,
       skipEmptyLines: true,
-    }).data;
+    });
+    const students = parsedData.data;
+    const numberOfStudents = students.length;
+    console.log(`Number of students: ${numberOfStudents}`);
 
-    console.log(`Number of students: ${result.length}`);
-    const numberOfCsStudentList = [];
-    const numberOfSweStudentList = [];
-    result.forEach((element) => ((element.field === 'CS') ? numberOfCsStudentList.push(element.firstname) : numberOfSweStudentList.push(element.firstname)));
-    console.log(`Number of students in CS: ${numberOfCsStudentList.length}. List: ${numberOfCsStudentList.join(', ')} `);
-    console.log(`Number of students in SWE: ${numberOfSweStudentList.length}. List: ${numberOfSweStudentList.join(', ')} `);
+    const studSet = new Set();
+    students.forEach((student) => {
+      studSet.add(student.field);
+    });
+    const studFields = Array.from(studSet);
+
+    studFields.forEach((studField) => {
+      const studsPerField = students.filter((student) => student.field === studField);
+      const studFirstName = [];
+      studsPerField.forEach((studPerField) => {
+        studFirstName.push(studPerField.firstname);
+      });
+      console.log(`Number of students in ${studField}: ${studFirstName.length}. List: ${studFirstName.join(', ')}`);
+    });
   } catch (err) {
     throw new Error('Cannot load the database');
   }
