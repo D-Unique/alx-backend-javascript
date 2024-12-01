@@ -1,0 +1,16 @@
+{
+  "name": "0x06-unittests_in_js",
+  "version": "1.0.0",
+  "description": "## Description This project focuses on writing unit tests in JavaScript using the Mocha testing framework and Chai assertion library. The goal is to understand the importance of testing, how to write effective unit tests, and how to integrate testing into the development workflow.",
+  "main": "0-calcul.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Emmanuel",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.8.2",
+    "eslint": "^6.4.0"
+
+  }
+}
