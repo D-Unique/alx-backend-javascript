@@ -10,7 +10,9 @@ describe('operation', function () {
     })
     it('DIVIDE', function () {
         assert.equal(calculateNumber('DIVIDE', 1.4, 0), 'Error')
+        assert.equal(calculateNumber('DIVIDE', 1.4, 4.5), 0.2)
     })
 
 })
 
+module.exports = calculateNumber
