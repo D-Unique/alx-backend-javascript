@@ -14,5 +14,3 @@ describe('operation', function () {
     })
 
 })
-
-module.exports = calculateNumber
