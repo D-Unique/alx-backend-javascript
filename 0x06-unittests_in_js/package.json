@@ -9,8 +9,12 @@
   "author": "Emmanuel",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^10.8.2",
-    "eslint": "^6.4.0"
-
+    "chai": "^5.1.2",
+    "eslint": "^6.4.0",
+    "mocha": "^10.8.2"
+    
+  },
+  "dependencies": {
+    "undefined": "^0.1.0"
   }
 }
