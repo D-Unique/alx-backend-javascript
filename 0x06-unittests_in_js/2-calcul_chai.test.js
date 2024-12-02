@@ -22,6 +22,3 @@ describe('Divide', function () {
 })
 
 })
-
-
-module.exports = calculateNumber
